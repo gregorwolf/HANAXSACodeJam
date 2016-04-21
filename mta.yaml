@@ -1,3 +1,27 @@
 _schema-version: 2.0.0
-ID: HANAXSACodeJam
+ID: DEV602
+description: HANA XSA CodeJam
 version: 0.0.1
+
+modules:
+- name: web
+  type: html5
+  path: web
+  requires:
+    - name: dev602_09-uaa
+
+
+- name: db
+  type: hdb
+  path: db
+  requires:
+  - name: hdi-container
+
+resources:
+  - name: dev602_09-uaa
+    type: com.sap.xs.uaa
+    parameters:
+      config_path: ./xs-security.json
+  - name: hdi-container
+    type: com.sap.xs.hdi-container
+

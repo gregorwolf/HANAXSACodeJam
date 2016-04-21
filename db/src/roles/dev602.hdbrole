@@ -1,0 +1,32 @@
+{
+	"role":{
+		"name": "dev602.roles::dev602",
+		"object_privileges":[
+			{
+				"name": "dev602.data::PurchaseOrder.Header",
+				"type": "TABLE",
+				"privileges": [ "SELECT" ]
+			},
+			{
+				"name": "dev602.data::PurchaseOrder.Item",
+				"type": "TABLE",
+				"privileges": [ "SELECT" ]
+			},
+			{
+				"name": "dev602.procedures::getPOItems",
+				"type": "PROCEDURE",
+				"privileges": [ "EXECUTE" ]
+			},
+			{
+				"name": "dev602.data::PurchaseOrder.ItemView",
+				"type": "VIEW",
+				"privileges": [ "SELECT" ]
+			}		
+		],
+		"schema_analytic_privileges": [
+            {
+                "privileges":[ "dev602.roles::PO_VIEW_PRIVILEGE" ]
+            }
+        ]
+	}
+}
