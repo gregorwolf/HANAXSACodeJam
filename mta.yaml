@@ -10,7 +10,6 @@ modules:
   requires:
     - name: dev602_09-uaa
 
-
 - name: db
   type: hdb
   path: db
