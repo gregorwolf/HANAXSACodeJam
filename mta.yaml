@@ -3,6 +3,7 @@ ID: DEV602
 description: HANA XSA CodeJam
 version: 0.0.1
 
+-modules:
 - name: web
   type: html5
   path: web
