@@ -3,7 +3,7 @@ ID: DEV602
 description: HANA XSA CodeJam
 version: 0.0.1
 
--modules:
+modules:
 - name: web
   type: html5
   path: web
@@ -21,7 +21,6 @@ version: 0.0.1
   path: db
   requires:
   - name: hdi-container
-
 
 - name: js
   type: nodejs

@@ -1,9 +1,10 @@
 function hdbDirectTest(){
   var results = _selection();
-	//Pass output to response		
-	$.response.status = $.net.http.OK;
-	$.response.contentType = "application/json";
-	$.response.setBody(JSON.stringify(results));
+//Pass output to response		
+$.response.status = $.net.http.OK;
+$.response.contentType = "application/json";
+$.response.setBody(JSON.stringify(results));
+
 }
 
 function hdbFlattenedTest(){

@@ -15,6 +15,7 @@ output.freemem = os.freemem();
 output.cpus = os.cpus();
 output.networkInfraces = os.networkInterfaces();
 
+
 $.response.status = $.net.http.OK;
 $.response.contentType = "application/json";
 $.response.setBody(JSON.stringify(output));
