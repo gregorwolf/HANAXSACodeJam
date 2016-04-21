@@ -3,18 +3,36 @@ ID: DEV602
 description: HANA XSA CodeJam
 version: 0.0.1
 
-modules:
 - name: web
   type: html5
   path: web
   requires:
-    - name: dev602_09-uaa
+    - name: dev602_01-uaa
+    - name: nodejs
+      group: destinations
+      properties:
+        name: nodejs
+        url: ~{url}
+        forwardAuthToken: true
 
 - name: db
   type: hdb
   path: db
   requires:
   - name: hdi-container
+
+
+- name: js
+  type: nodejs
+  path: js
+  provides: 
+    - name: nodejs
+      properties:
+        url: "${default-url}"
+  requires:
+    - name: dev602_01-uaa
+    - name: db
+    - name: hdi-container
 
 resources:
   - name: dev602_09-uaa
