@@ -1,0 +1,10 @@
+service namespace "dev602.services" {
+    "dev602.data::PurchaseOrder.Header" 
+	  as "POHeader" navigates ("Items" as "POItem");
+	  
+	"dev602.data::PurchaseOrder.Item" 
+	  as "POItem";
+	  
+	association "Items" principal  "POHeader"("PURCHASEORDERID")
+	multiplicity "1" dependent "POItem"("PURCHASEORDERID") multiplicity "*";
+}
