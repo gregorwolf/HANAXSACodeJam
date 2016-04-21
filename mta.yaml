@@ -8,7 +8,7 @@ version: 0.0.1
   type: html5
   path: web
   requires:
-    - name: dev602_01-uaa
+    - name: dev602_09-uaa
     - name: nodejs
       group: destinations
       properties:
@@ -31,7 +31,7 @@ version: 0.0.1
       properties:
         url: "${default-url}"
   requires:
-    - name: dev602_01-uaa
+    - name: dev602_09-uaa
     - name: db
     - name: hdi-container
 
